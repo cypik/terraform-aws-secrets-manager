@@ -1,4 +1,4 @@
-# terraform-aws-secrets-manager
+# Terraform-aws-secrets-manager
 
 # Terraform AWS Cloud secrets-manager Module
 
@@ -16,14 +16,15 @@ This Terraform module creates an AWS secrets-manager along with additional confi
 ## Usage
 To use this module, you should have Terraform installed and configured for AWS. This module provides the necessary Terraform configuration for creating AWS resources, and you can customize the inputs as needed. Below is an example of how to use this module:
 
-# Example:
+# Examples:
+
+## Binary:
 
 ```hcl
 
-## Binary:
 module "secrets_manager" {
-
-  source      = "../../"
+  source      = "cypik/secrets-manager/aws"
+  version     = "1.0.0"
   name        = local.name
   environment = local.environment
 
@@ -41,11 +42,14 @@ module "secrets_manager" {
     }
   ]
 }
-
+```
 ## Complete:
-module "secrets_manager" {
-  source = "../../"
 
+```hcl
+
+module "secrets_manager" {
+  source      = "cypik/secrets-manager/aws"
+  version     = "1.0.0"
   name        = local.name
   environment = local.environment
   secrets = [
@@ -63,11 +67,14 @@ module "secrets_manager" {
     }
   ]
 }
-
+```
 ## key-value:
-module "secrets_manager" {
-  source = "../../"
 
+```hcl
+
+module "secrets_manager" {
+  source      = "cypik/secrets-manager/aws"
+  version      = "1.0.0"
   name        = local.name
   environment = local.environment
   secrets = [
@@ -99,7 +106,6 @@ module "secrets_manager" {
     },
   ]
 }
-
 ```
 This example demonstrates how to create various AWS resources using the provided modules. Adjust the input values to suit your specific requirements.
 
