@@ -21,7 +21,8 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 ## Binary:
 module "secrets_manager" {
-  source      = "../../"
+  source      = "cypik/secrets-manager/aws"
+  version     = "1.0.0"
   name        = local.name
   environment = local.environment
 
@@ -44,7 +45,8 @@ module "secrets_manager" {
 ```hcl
 ## Complete:
 module "secrets_manager" {
-  source      = "../../"
+  source      = "cypik/secrets-manager/aws"
+  version     = "1.0.0"
   name        = local.name
   environment = local.environment
   secrets = [
@@ -67,7 +69,8 @@ module "secrets_manager" {
 ```hcl
 ## key-value:
 module "secrets_manager" {
-  source      = "../../"
+  source      = "cypik/secrets-manager/aws"
+  version      = "1.0.0"
   name        = local.name
   environment = local.environment
   secrets = [
