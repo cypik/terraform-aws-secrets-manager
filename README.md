@@ -1,4 +1,4 @@
-# terraform-aws-secrets-manager
+# Terraform-aws-secrets-manager
 
 # Terraform AWS Cloud secrets-manager Module
 
@@ -18,8 +18,10 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 # Examples:
 
-```hcl
 ## Binary:
+
+```hcl
+
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
   version     = "1.0.0"
@@ -41,9 +43,10 @@ module "secrets_manager" {
   ]
 }
 ```
+## Complete:
 
 ```hcl
-## Complete:
+
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
   version     = "1.0.0"
@@ -65,9 +68,10 @@ module "secrets_manager" {
   ]
 }
 ```
+## key-value:
 
 ```hcl
-## key-value:
+
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
   version      = "1.0.0"
