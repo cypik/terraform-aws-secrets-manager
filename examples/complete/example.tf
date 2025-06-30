@@ -15,13 +15,13 @@ module "secrets_manager" {
   environment = local.environment
   secrets = [
     {
-      name                    = "secret-11"
+      name                    = "secret-11-new"
       description             = "My secret 1"
       recovery_window_in_days = 7
       secret_string           = "This is an example"
     },
     {
-      name                    = "secret-12"
+      name                    = "ssecret-12-new"
       description             = "My secret 2"
       recovery_window_in_days = 7
       secret_string           = "This is another example"
