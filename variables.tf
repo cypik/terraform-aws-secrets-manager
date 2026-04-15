@@ -83,3 +83,9 @@ variable "replica" {
   type        = map(any)
   default     = {}
 }
+
+variable "create_unmanaged_version" {
+  description = "Whether to create secret versions for unmanaged secrets (existing secrets)"
+  type        = bool
+  default     = false
+}
