@@ -46,7 +46,7 @@ resource "aws_secretsmanager_secret" "main" {
     }
   }
 
-  tags = module.labels.tags
+ # tags = module.labels.tags
 }
 
 resource "aws_secretsmanager_secret_version" "sm-sv" {
