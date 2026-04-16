@@ -50,7 +50,7 @@ resource "aws_secretsmanager_secret" "main" {
 }
 
 resource "aws_secretsmanager_secret_version" "sm-sv" {
-  count         = var.unmanaged && var.enabled ? 0 : length(local.secrets)
+  count         = !var.unmanaged && var.enabled ? length(local.secrets) : 0
   secret_id     = aws_secretsmanager_secret.main[count.index].id
   secret_string = lookup(element(local.secrets, count.index), "secret_string", null)
   secret_binary = lookup(element(local.secrets, count.index), "secret_binary", null) != null ? base64encode(lookup(element(local.secrets, count.index), "secret_binary", null)) : null
