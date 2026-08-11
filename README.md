@@ -24,7 +24,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
-  version     = "1.0.0"
+  version     = "1.0.1"
   name        = local.name
   environment = local.environment
 
@@ -49,7 +49,7 @@ module "secrets_manager" {
 
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
-  version     = "1.0.0"
+  version     = "1.0.1"
   name        = local.name
   environment = local.environment
   secrets = [
@@ -74,7 +74,7 @@ module "secrets_manager" {
 
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
-  version      = "1.0.0"
+  version      = "1.0.1"
   name        = local.name
   environment = local.environment
   secrets = [
