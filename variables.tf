@@ -83,3 +83,9 @@ variable "replica" {
   default     = {}
   description = "Configuration block to support secret replication"
 }
+
+variable "create_unmanaged_version" {
+  type        = bool
+  default     = false
+  description = "Whether to create secret versions for unmanaged secrets (existing secrets)"
+}

@@ -24,7 +24,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = local.name
   environment = local.environment
 
@@ -49,7 +49,7 @@ module "secrets_manager" {
 
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = local.name
   environment = local.environment
   secrets = [
@@ -74,7 +74,7 @@ module "secrets_manager" {
 
 module "secrets_manager" {
   source      = "cypik/secrets-manager/aws"
-  version      = "1.0.1"
+  version      = "1.0.2"
   name        = local.name
   environment = local.environment
   secrets = [
@@ -124,21 +124,21 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.12.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.99.1 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.1.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.15.8 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.58.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.99.1 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.58.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.2 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.4 |
 
 ## Resources
 
@@ -154,6 +154,7 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_attributes"></a> [attributes](#input\_attributes) | Additional attributes (e.g. `1`). | `list(any)` | `[]` | no |
+| <a name="input_create_unmanaged_version"></a> [create\_unmanaged\_version](#input\_create\_unmanaged\_version) | Whether to create secret versions for unmanaged secrets (existing secrets) | `bool` | `false` | no |
 | <a name="input_enable_rotation"></a> [enable\_rotation](#input\_enable\_rotation) | Determines whether secret rotation is enabled | `bool` | `false` | no |
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | Flag to control the vpc creation. | `bool` | `true` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
